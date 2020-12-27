@@ -19,10 +19,19 @@ function appSet() {
                 name: "managerName",
                 message: "Please enter your manager's name."
             },
-    
-        }
+            {
+                type: "input",
+                name: "managerId",
+                message: "Please enter your manager's Id."
+            },
 
-}   }
+            {
+                type: "input",
+                name: "managerEmail",
+                message: "Please enter your manager's email."
+            },
+
+
 // Write  about code to use inquirer to gather informationt the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
