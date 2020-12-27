@@ -30,6 +30,11 @@ function appSet() {
                 name: "managerEmail",
                 message: "Please enter your manager's email."
             },
+            {
+                type: "input",
+                name: "managerOfficeNumber",
+                message: "Please enter your manager's office number."
+            },
 
 
 // Write  about code to use inquirer to gather informationt the development team members,
