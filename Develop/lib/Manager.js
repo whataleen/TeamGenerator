@@ -7,4 +7,7 @@ class Manger extends Employee {
         // officeNumber
         // getRole() // Overridden to return 'Manager'
     }
+    getRole() {
+        return 'Manager';
+    }
 }
