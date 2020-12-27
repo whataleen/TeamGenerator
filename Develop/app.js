@@ -35,6 +35,12 @@ function appSet() {
                 name: "managerOfficeNumber",
                 message: "Please enter your manager's office number."
             },
+        ]).then(answer => {
+            const engineer = new Engineer(answers.engineerName, answera.engineerId, answers.engineerEmail, answers.engineerGithub);
+            teamMembers.push(engineer);
+            answersArray.push(answers.engineerId);
+            makeTeam();
+        });
 
 
 // Write  about code to use inquirer to gather informationt the development team members,
