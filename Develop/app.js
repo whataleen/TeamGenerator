@@ -10,37 +10,30 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-function appSet() {
-    function makeManager() {
-        console.log("Assembled Team");
-        inquirer.prompt([
-            {
-                type: "input",
-                name: "managerName",
-                message: "Please enter your manager's name."
-            },
-            {
-                type: "input",
-                name: "managerId",
-                message: "Please enter your manager's Id."
-            },
 
-            {
-                type: "input",
-                name: "managerEmail",
-                message: "Please enter your manager's email."
-            },
-            {
-                type: "input",
-                name: "managerOfficeNumber",
-                message: "Please enter your manager's office number."
-            },
-        ]).then(answer => {
-            const engineer = new Engineer(answers.engineerName, answera.engineerId, answers.engineerEmail, answers.engineerGithub);
-            teamMembers.push(engineer);
-            answersArray.push(answers.engineerId);
-            makeTeam();
-        });
+inquirer
+    .prompt([
+        {
+            type: "list",
+            name: "employeeType",
+            message: "Please enter type of employee.",
+            choices: ["Manager", "Engineer", "Intern"]
+        }
+    ])
+    .then(answers => {
+        console.log("Employee type I inserted was %s", answers.employeeType);
+        // Use user feedback for... whatever!!
+    })
+    .catch(error => {
+        if (error.isTtyError) {
+            // Prompt couldn't be rendered in the current environment
+        } else {
+            // Something else when wrong
+        }
+    });
+
+
+
 
 
 // Write  about code to use inquirer to gather informationt the development team members,
