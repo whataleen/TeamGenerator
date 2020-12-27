@@ -1,8 +1,6 @@
 // TODO: Write code to define and export the Intern class.  HINT: This class should inherit from Employee.
-class Intern {
+class Intern extends Employee {
     constructor(name, id, email) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
+        super(name, id, email);
     }
 }
