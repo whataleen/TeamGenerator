@@ -10,7 +10,19 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+function appSet() {
+    function makeManager() {
+        console.log("Assembled Team");
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "managerName",
+                message: "Please enter your manager's name."
+            },
+    
+        }
 
+}   }
 // Write  about code to use inquirer to gather informationt the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
