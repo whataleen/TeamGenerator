@@ -4,3 +4,9 @@ class Intern extends Employee {
         super(name, id, email);
     }
 }
+
+//school
+
+// getSchool()
+
+// getRole() // Overridden to return 'Intern'

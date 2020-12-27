@@ -5,4 +5,9 @@ class Engineer extends Employee {
     }
 }
 
+//github  // GitHub username
+
+// getGithub()
+
+// getRole() // Overridden to return 'Engineer'
 
