@@ -21,17 +21,29 @@ inquirer
         }
     ])
     .then(answers => {
-        console.log("Employee type I inserted was %s", answers.employeeType);
-        // Use user feedback for... whatever!!
-    })
-    .catch(error => {
-        if (error.isTtyError) {
-            // Prompt couldn't be rendered in the current environment
-        } else {
-            // Something else when wrong
-        }
-    });
+        if (answers.employeeType == "Manager") {
+            console.log("you clicked manager");
 
+            .prompt([
+                {
+                    type: "input",
+                    name: "ManagerName",
+                    message: "Please enter your manager's name.",
+                }
+        }
+
+        else if (answers.employeeType == "Engineer") {
+            console.log("you clicked engineer");
+        }
+
+        else if (answers.employeeType == "Intern") {
+            console.log("you clicked intern");
+        }
+
+
+        //console.log("Employee type I inserted was %s", answers.employeeType);
+        // Use user feedback for... whatever!!
+    });
 
 
 
