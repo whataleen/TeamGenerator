@@ -52,11 +52,44 @@ inquirer
 
                 ]).then(answers => {
                     const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+
                 })
+
+
+
+
         }
 
         else if (answers.employeeType == "Engineer") {
-            console.log("you clicked engineer");
+            inquirer
+                .prompt([
+                    {
+                        type: "input",
+                        name: "engineerName",
+                        message: "Enter the engineer's name."
+                    },
+                    {
+                        type: "input",
+                        name: "engineerId",
+                        message: "engineer Id"
+                    },
+
+                    {
+                        type: "input",
+                        name: "engineerEmail",
+                        message: "engineer's Email: "
+                    },
+
+                    {
+                        type: "input",
+                        name: "engineerGithub",
+                        message: "Enter engineer's Github profile"
+                    }
+
+                ]).then(answers => {
+                    const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+
+                })
         }
 
         else if (answers.employeeType == "Intern") {
