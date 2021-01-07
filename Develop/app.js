@@ -94,6 +94,37 @@ inquirer
 
         else if (answers.employeeType == "Intern") {
             console.log("you clicked intern");
+
+            inquirer
+                .prompt([
+                    {
+                        type: "input",
+                        name: "internName",
+                        message: "Enter the intern's name."
+                    },
+                    {
+                        type: "input",
+                        name: "internId",
+                        message: "intern Id"
+                    },
+
+                    {
+                        type: "input",
+                        name: "internEmail",
+                        message: "intern's Email: "
+                    },
+
+                    {
+                        type: "input",
+                        name: "internSchool",
+                        message: "Enter intern's school "
+
+                    }
+
+                ]).then(answers => {
+                    const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+
+                })
         }
 
 
