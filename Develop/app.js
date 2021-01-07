@@ -24,12 +24,35 @@ inquirer
         if (answers.employeeType == "Manager") {
             console.log("you clicked manager");
 
-            .prompt([
-                {
-                    type: "input",
-                    name: "ManagerName",
-                    message: "Please enter your manager's name.",
-                }
+
+            inquirer
+                .prompt([
+                    {
+                        type: "input",
+                        name: "managerName",
+                        message: "Enter the manager's name."
+                    },
+                    {
+                        type: "input",
+                        name: "managerId",
+                        message: "Manager Id"
+                    },
+
+                    {
+                        type: "input",
+                        name: "managerEmail",
+                        message: "Manager's Email: "
+                    },
+
+                    {
+                        type: "input",
+                        name: "managerOfficeNumber",
+                        message: "Enter manager's office number"
+                    }
+
+                ]).then(answers => {
+                    const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+                })
         }
 
         else if (answers.employeeType == "Engineer") {
