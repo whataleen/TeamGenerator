@@ -18,4 +18,21 @@ const randomIntern = new Intern("randomIntern", 123, "random@intern.com", 404);
 
 
 myTeam.push(randomManager);
-console.log(myTeam); 
+myTeam.push(randomEngineer);
+myTeam.push(randomIntern);
+//console.log(myTeam); 
+
+//render(myTeam);
+var output = render(myTeam);
+
+
+function createHTML(inputTeam) {
+    fs.writeFile("linasTeam.html", inputTeam, (err) => {
+        if (err) {
+            throw err;
+        };
+        console.log("Your html file has been created");
+    });
+};
+
+createHTML(output);
