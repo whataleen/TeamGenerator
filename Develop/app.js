@@ -12,27 +12,27 @@ const render = require("./lib/htmlRenderer");
 
 
 var myTeam = [];
-const randomManager = new Manager("randomManager", 123, "random@manager.com", 404);
-const randomEngineer = new Engineer("randomEngineer", 123, "random@engineer.com", 404);
-const randomIntern = new Intern("randomIntern", 123, "random@intern.com", 404);
-
-
-myTeam.push(randomManager);
-myTeam.push(randomEngineer);
-myTeam.push(randomIntern);
-//console.log(myTeam); 
-
-//render(myTeam);
-var output = render(myTeam);
-
-
-function createHTML(inputTeam) {
-    fs.writeFile("linasTeam.html", inputTeam, (err) => {
-        if (err) {
-            throw err;
-        };
-        console.log("Your html file has been created");
-    });
-};
-
-createHTML(output);
+function init() {
+    return inquirer.prompt([
+        {
+            type: "input",
+            name: "managerName",
+            message: "Enter the team manager's name: "
+        },
+        {
+            type: "input",
+            name: "managerId",
+            message: "Enter the team manager's ID: "
+        },
+        {
+            type: "input",
+            name: "managerEmail",
+            message: "Enter the team manager's email: "
+        },
+        {
+            type: "input",
+            name: "managerOffice",
+            message: "Enter the team manager's office number: "
+        }
+    ]);
+}
