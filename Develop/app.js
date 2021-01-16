@@ -58,3 +58,47 @@ const internQs = [
         message: "Enter the intern's school: "
     }
 ];
+const engineerQs = [
+    {
+        type: "input",
+        name: "engineerName",
+        message: "Enter the engineer's name: "
+    },
+    {
+        type: "input",
+        name: "engineerId",
+        message: "Enter the engineer's ID: "
+    },
+    {
+        type: "input",
+        name: "engineerEmail",
+        message: "Enter the engineer's email: "
+    },
+    {
+        type: "input",
+        name: "engineerGithub",
+        message: "Enter the engineer's GitHub: "
+    }
+];
+const engineerQs = [
+    {
+        type: "input",
+        name: "engineerName",
+        message: "Enter the engineer's name: "
+    },
+    {
+        type: "input",
+        name: "engineerId",
+        message: "Enter the engineer's ID: "
+    },
+    {
+        type: "input",
+        name: "engineerEmail",
+        message: "Enter the engineer's email: "
+    },
+    {
+        type: "input",
+        name: "engineerGithub",
+        message: "Enter the engineer's GitHub: "
+    }
+];
