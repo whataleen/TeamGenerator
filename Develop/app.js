@@ -102,3 +102,18 @@ const engineerQs = [
         message: "Enter the engineer's GitHub: "
     }
 ];
+function createTeam() {
+    inquirer.prompt([
+        {
+            type: "list",
+            name: "option",
+            message: "Would you like to add a member or is the team complete? ",
+            choices: ["Yes, add an engineer", "Yes, add an intern", "No, the team is complete"]
+        }
+    ]).then(answers => {
+        if (answers.option === "Yes, add an engineer") {
+            return inquirer.prompt(engineerQs).then(answers => {
+                let newEngineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+                myTeam.push(newEngineer);
+                createTeam();
+            }); 
