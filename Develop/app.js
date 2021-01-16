@@ -36,3 +36,25 @@ function init() {
         }
     ]);
 }
+const internQs = [
+    {
+        type: "input",
+        name: "internName",
+        message: "Enter the intern's name: "
+    },
+    {
+        type: "input",
+        name: "internId",
+        message: "Enter the intern's ID: "
+    },
+    {
+        type: "input",
+        name: "internEmail",
+        message: "Enter the intern's email: "
+    },
+    {
+        type: "input",
+        name: "internSchool",
+        message: "Enter the intern's school: "
+    }
+];
